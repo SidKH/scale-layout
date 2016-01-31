@@ -1,0 +1,65 @@
+$breakpoints: (
+  'xs-phone': 320px,
+  'phone': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'widescreen': 1200px
+);
+
+// keywords
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+// ligatured operators ≥ ≤
+
+@import 'vendor/include-media';
+@import 'vendor/normalize';
+
+@import 'base/variables';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/helpers';
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/forms';
+
+body, html, #wrapper, .section, .section-holder {
+  height: 100%;
+}
+
+.section {
+  position: relative;
+  overflow: hidden;
+  img {
+    position: absolute;
+    outline: 1px solid #000;
+    top: 50%;
+    left: 50%;
+    max-width: none;
+  }
+  .pos-1 {
+    margin-top: -200px;
+    width: 400px;
+    z-index: 100;
+    margin-left: -400px;
+  }
+  .pos-2 {
+    margin-top: -100px;
+    width: 640px;
+    z-index: 50;
+    margin-left: -300px;
+  }
+  .pos-3 {
+    margin-top: -250px;
+    width: 256px;
+    z-index: 100;
+    margin-left: 200px;
+  }
+}
